@@ -1,6 +1,6 @@
 {
   "name": "color-set",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Tyler Benton",
   "main": "dist/index.js",
   "scripts": {
