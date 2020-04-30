@@ -2,6 +2,11 @@
   "name": "color-set",
   "version": "0.0.2",
   "author": "Tyler Benton",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "make build",
+    "postinstall": "make build"
+  },
   "dependencies": {
     "tinycolor2": "1.4.1"
   },
