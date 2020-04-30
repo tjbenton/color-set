@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "make build",
-    "postinstall": "make build"
+    "test": "make build"
   },
   "dependencies": {
     "tinycolor2": "1.4.1"
