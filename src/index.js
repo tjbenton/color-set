@@ -112,7 +112,7 @@ export function colorSet (colors, inputOptions = {}) {
   return fn
 }
 
-export const color = (...args) => color?.fn(...args)
+export const color = (...args) => color?.fn?.(...args)
 
 color.set = (colors) => {
   color.fn = colorSet(colors)
