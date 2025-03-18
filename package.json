@@ -2,18 +2,38 @@
   "name": "color-set",
   "version": "0.1.0",
   "author": "Tyler Benton",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo 'no tests'"
+    "build": "make build",
+    "test": "make build"
   },
   "dependencies": {
     "tinycolor2": "1.4.1"
   },
   "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.6",
+    "@babel/plugin-proposal-optional-chaining": "7.9.0",
+    "@babel/preset-env": "7.9.6",
     "eslint": "6.8.0",
     "eslint-config-ma-shop": "0.1.41"
   },
   "eslintConfig": {
     "extends": "ma-shop"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "8"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining"
+    ]
   }
 }
