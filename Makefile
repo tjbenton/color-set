@@ -15,10 +15,6 @@ clean-deep:
 	@make clean
 	@rm -rf node_modules
 
-# builds on jenkins/openshift
-build:
-	@babel --copy-files src -d dist $(args)
-
 # runs eslint
 lint:
 	@eslint '+(src)/**/*.+(js|mjs)' --cache --fix
@@ -26,7 +22,3 @@ lint:
 # cleans and installs node modules
 reinstall:
 	@make clean-deep install
-
-# runs graphql server that refreshes on change
-watch:
-	@make build -- --watch

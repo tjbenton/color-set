@@ -114,8 +114,11 @@ export function colorSet (colors, inputOptions = {}) {
 
 export const color = (...args) => color?.fn?.(...args)
 
+
+color.createSet = (colors) => colorSet(colors)
+
 color.set = (colors) => {
-  color.fn = colorSet(colors)
+  color.fn = colorSet({ ...color?.fn?.colors, ...colors })
 }
 
 color.rgba = (colorValue, alpha = 1) => {
